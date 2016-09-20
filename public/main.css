@@ -6,10 +6,6 @@ body {
   margin-bottom: 0;
 }
 
-.nav>ul>li>a:hover {
-  background-color: transparent;
-}
-
 #msg {
   resize: none;
 }
@@ -32,6 +28,14 @@ p {
   width: 400px;
 }
 
+footer {
+  background-color: black;
+}
+
 #footer_links {
   padding: 20px;
+}
+
+.ptop40 {
+  padding-top: 40px;
 }

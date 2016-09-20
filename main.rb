@@ -1,8 +1,12 @@
-require 'sinatra'
+require 'rubygems'
 require 'twilio-ruby'
+require 'sinatra'
 
-get '/' do
-  erb :layout
+account_sid = 'ACc2833364b27ec907833f5075df828a0d'
+auth_token = '4746ca9cd0c60159e9409a5e3e88b608'
+
+get '/index' do
+  erb :index
 end
 
 post '/receive_sms' do
@@ -13,4 +17,27 @@ post '/receive_sms' do
   end
 
   response.to_xml
+end
+
+get '/send_sms' do
+  erb :layout
+end
+
+get '/confirmation' do
+  erb :confirmation
+end
+
+post '/send_sms' do
+  to = params[:recipient_tel]
+  message = params[:message]
+
+  @client = Twilio::REST::Client.new account_sid, auth_token
+
+  @client.messages.create({
+    to: to,
+    from: '+19177465953',
+    body: message
+  })
+
+  redirect :confirmation
 end
