@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Messenger</title>
+  <link rel="stylesheet" type="text/css" href="/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">SMS Messenger</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="jumbotron">
+        <form>
+          <h3>Send an SMS message here</h3>
+          <div class="form-group">
+            <label for="name">Sender's name:</label>
+            <input type="name" class="form-control" id="sender">
+          </div>
+          <div class="form-group">
+            <label for="email">Recipient's phone number:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Message:</label>
+            <textarea name="message" rows="10" class="form-control" placeholder="Limit 150 Characters" id="msg"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h3>Instructions:</h3>
+      <p>- Enter your name</p>
+      <p>- Enter the recipient's phone number</p>
+      <p>- Enter your message</p>
+      <p>- Submit and voila! It's that simple</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" id="footer_links">
+      <p class ="text pull-left">Built by Jimmy Adames &copy; 2016</p>
+      <a class ="btn btn-primary btn pull-right" href="https://github.com/adamesj/blog">Link to Git Repository</a>
+    </div>
+  </footer>
+
+</body>
+</html>

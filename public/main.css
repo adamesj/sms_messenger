@@ -1,0 +1,37 @@
+body {
+  background:center no-repeat fixed url("/images/phone.jpg");
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.nav>ul>li>a:hover {
+  background-color: transparent;
+}
+
+#msg {
+  resize: none;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  color: white;
+}
+
+.form-group {
+  display: block;
+  margin: 0 auto;
+}
+
+.form-group {
+  width: 400px;
+}
+
+#footer_links {
+  padding: 20px;
+}
