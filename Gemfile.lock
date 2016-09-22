@@ -18,7 +18,6 @@ GEM
       bacon
       sequel (>= 3.2.0)
       sinatra (>= 0.9.4)
-    sqlite3 (1.3.11)
     tilt (2.0.5)
     twilio-ruby (4.13.0)
       builder (>= 2.1.2)
@@ -31,7 +30,6 @@ PLATFORMS
 DEPENDENCIES
   dotenv
   sinatra-sequel
-  sqlite3
   twilio-ruby
 
 BUNDLED WITH
