@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-6">
       <div class="well">
-        <form action='/send_sms' method="post" id="my_form">
+        <form name='message_form' action='/send_sms' method="post" id="my_form" onsubmit="return validateForm()">
           <h3>Send an SMS message here</h3>
           <div class="form-group">
             <label for="number">Recipient's phone number:</label>
@@ -22,12 +22,9 @@
             <div class="character-count" id="char-count">
                 <p></p>
             </div>
-            <div class="comment" id="visible-comment">
-                <p></p>
-            </div>
           </div>
           <div class="form-group">
-            <button type="submit" class="btn btn-primary" id="submit_button" onClick="return empty()">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submit_button">Submit</button>
           </div>
         </form>
       </div>

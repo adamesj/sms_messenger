@@ -21,11 +21,10 @@ $(function() {
 });
 
 // Submit button
-function empty() {
-  var x;
-  x = document.getElementById("submit_button");
-  if (x.value.length == 0) {
-    alert("You cannot leave a field blank.");
+function validateForm() {
+  var x = document.forms["message_form"]["msg_box"].value;
+  if (x == null || x == "") {
+    alert("You cannot send an empty message!");
     return false;
-  };
+  }
 }
