@@ -3,13 +3,6 @@ require 'twilio-ruby'
 require 'sinatra'
 require 'dotenv'
 
-configure do
-  DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://database.db')
-
-  gem 'sqlite3', :group => 'development'
-  gem 'pg', :group => 'production'
-end
-
 account_sid = 'ACc2833364b27ec907833f5075df828a0d'
 auth_token = '4746ca9cd0c60159e9409a5e3e88b608'
 
@@ -25,7 +18,7 @@ get '/messages/received' do
   erb :'messages/received'
 end
 
-get '/home' do
+get '/' do
   erb :home
 end
 
