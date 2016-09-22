@@ -67,7 +67,7 @@ h1 {
 }
 
 #confirmation_well {
-  height: 400px;
+  height: 450px;
 }
 
 #border {
@@ -76,6 +76,12 @@ h1 {
   border-bottom: 1px solid black;
   margin: 40px 0 40px 220px;
   padding-top: 20px;
+}
+
+#redirect_btn {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Footer */
