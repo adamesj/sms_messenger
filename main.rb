@@ -1,9 +1,22 @@
 require 'rubygems'
 require 'twilio-ruby'
 require 'sinatra'
+require 'dotenv'
 
 account_sid = 'ACc2833364b27ec907833f5075df828a0d'
 auth_token = '4746ca9cd0c60159e9409a5e3e88b608'
+
+Twilio.configure do |config|
+  config.account_sid = account_sid
+  config.auth_token = auth_token
+end
+
+get '/messages/received' do
+  client = Twilio::REST::Client.new
+  @messages = client.messages.list(to: '+19177465953')
+
+  erb :'messages/received'
+end
 
 get '/home' do
   erb :home

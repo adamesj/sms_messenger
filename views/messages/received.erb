@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="well">
+    <h1>Messages received</h1>
+    <% @messages.each do |message| %>
+      <h3>From <%= message.from %> to <%= message.to %></h3>
+      <p><%= message.body %></p>
+    <% end %>
+  </div>
+</div>

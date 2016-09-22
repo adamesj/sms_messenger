@@ -1,8 +1,8 @@
 $(document).ready(function(){
 //Character count
-  $("#msg").on("keyup", function() {
+  $("#msg_box").on("keyup", function() {
     console.log("keyup happened");
-    var charCount = $("#msg").val().length;
+    var charCount = $("#msg_box").val().length;
     console.log(charCount);
     $("#char-count").html('Word count: '+charCount);
     if(charCount > 200) {
@@ -23,8 +23,8 @@ $(function() {
 // Submit button
 function empty() {
   var x;
-  x = document.getElementById("submit_button").value;
-  if (x == "") {
+  x = document.getElementById("submit_button");
+  if (x.value.length == 0) {
     alert("You cannot leave a field blank.");
     return false;
   };
