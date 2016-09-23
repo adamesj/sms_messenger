@@ -12,12 +12,12 @@ $(document).ready(function(){
 });
 });
 
-// Submit button verification
-function validateForm() {
-  var x = document.forms["message_form"]["msg_box"].value;
+// Message verification
+function validateMessage() {
+  var x = document.forms["message_form"].value;
   var charCount = $("#msg_box").val().length;
   if (x == null || x == "") {
-    alert("You cannot send an empty message!");
+    alert("You cannot leave a field empty!");
     return false;
   }
   else if (charCount > 200) {
