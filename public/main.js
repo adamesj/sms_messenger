@@ -14,16 +14,18 @@ $(document).ready(function(){
 
 // Message verification
 function validateMessage() {
-  var x = document.forms["message_form"].value;
   var charCount = $("#msg_box").val().length;
+  if (charCount > 200) {
+    alert("Exceeded message limit!");
+    return false;
+  }
+
+  var x = document.forms["message_form"].value;
   if (x == null || x == "") {
     alert("You cannot leave a field empty!");
     return false;
   }
-  else if (charCount > 200) {
-    alert("Exceeded message limit!");
-    return false;
- }
+  return true;
 }
 
 // Telephone number formatting
