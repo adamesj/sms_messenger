@@ -12,14 +12,6 @@ $(document).ready(function(){
 });
 });
 
-// Tooltip for phone number format
-$(function() {
-  $('[data-toggle="tooltip"]').tooltip({
-    html: true,
-    title: 'Any of the following formats are accepted: 555-5555 555.5555 5555555'
-  });
-});
-
 // Submit button
 function validateForm() {
   var x = document.forms["message_form"]["msg_box"].value;
@@ -28,3 +20,7 @@ function validateForm() {
     return false;
   }
 }
+
+$(function(){
+  $("#tel_input").mask("(999) 999-9999");
+});

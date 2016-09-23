@@ -11,29 +11,12 @@ Twilio.configure do |config|
   config.auth_token = auth_token
 end
 
-get '/messages/received' do
-  client = Twilio::REST::Client.new
-  @messages = client.messages.list(to: '+19177465953')
-
-  erb :'messages/received'
-end
-
 get '/' do
   erb :home
 end
 
 get '/index' do
   erb :index
-end
-
-post '/receive_sms' do
-  content_type 'text/xml'
-
-  response = Twilio::TwiML::Response.new do |r|
-    r.Message 'Hey thanks for the message!'
-  end
-
-  response.to_xml
 end
 
 get '/send_sms' do
@@ -51,10 +34,27 @@ post '/send_sms' do
   @client = Twilio::REST::Client.new account_sid, auth_token
 
   @client.messages.create({
-    to: to,
+    to: '+1' + to,
     from: '+19177465953',
     body: message
   })
 
   redirect :confirmation
+end
+
+post '/receive_sms' do
+  content_type 'text/xml'
+
+  response = Twilio::TwiML::Response.new do |r|
+    r.Message 'Hey thanks for the message!'
+  end
+
+  response.to_xml
+end
+
+get '/messages/received' do
+  client = Twilio::REST::Client.new
+  @messages = client.messages.list(to: '+19177465953')
+
+  erb :'messages/received'
 end
