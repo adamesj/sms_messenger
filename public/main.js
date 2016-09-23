@@ -20,8 +20,8 @@ function validateMessage() {
     return false;
   }
 
-  var x = document.forms["message_form"].value;
-  if (x == null || x == "") {
+  var input = document.forms["message_form"]["msg_box"].value;
+  if (input == null || input == ""){
     alert("You cannot leave a field empty!");
     return false;
   }
