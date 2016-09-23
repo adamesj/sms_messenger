@@ -12,15 +12,21 @@ $(document).ready(function(){
 });
 });
 
-// Submit button
+// Submit button verification
 function validateForm() {
   var x = document.forms["message_form"]["msg_box"].value;
+  var charCount = $("#msg_box").val().length;
   if (x == null || x == "") {
     alert("You cannot send an empty message!");
     return false;
   }
+  else if (charCount > 200) {
+    alert("Exceeded message limit!");
+    return false;
+ }
 }
 
+// Telephone number formatting
 $(function(){
   $("#tel_input").mask("(999) 999-9999");
 });
