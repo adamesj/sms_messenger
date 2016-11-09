@@ -10,4 +10,6 @@ The criteria for passing the assignment included:
 
 The program was built using Ruby and Sinatra, with Bootstrap to design the Front End of the application.
 
+If you would like to test the application, please send me a message at ([jimmy.adames@gmail.com](http://jimmy.adames@gmail.com)) and I will provide the login credentials for you.
+
 [Live Application](https://sms-messenger.herokuapp.com/)
