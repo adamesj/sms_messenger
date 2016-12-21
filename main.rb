@@ -3,8 +3,8 @@ require 'twilio-ruby'
 require 'sinatra'
 require 'dotenv'
 
-account_sid = 'ACc2833364b27ec907833f5075df828a0d'
-auth_token = '4746ca9cd0c60159e9409a5e3e88b608'
+account_sid = 'AC6aad994a5ee13163b3d1f1829a5b9f55'
+auth_token = 'e504e42f808f51ee3a5974f9a077642a'
 
 Twilio.configure do |config|
   config.account_sid = account_sid
@@ -35,7 +35,7 @@ post '/send_sms' do
 
   @client.messages.create({
     to: '+1' + to,
-    from: '+19177465953',
+    from: '+13478942078',
     body: message
   })
 
@@ -54,7 +54,7 @@ end
 
 get '/messages/received' do
   client = Twilio::REST::Client.new
-  @messages = client.messages.list(to: '+19177465953')
+  @messages = client.messages.list(to: '+13478942078')
 
   erb :'messages/received'
 end
